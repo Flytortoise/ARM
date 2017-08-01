@@ -1,0 +1,14 @@
+.\output\bmp.o: bmp.c
+.\output\bmp.o: app.h
+.\output\bmp.o: led.h
+.\output\bmp.o: delay.h
+.\output\bmp.o: lcd.h
+.\output\bmp.o: uart.h
+.\output\bmp.o: printf.h
+.\output\bmp.o: types.h
+.\output\bmp.o: nand.h
+.\output\bmp.o: key.h
+.\output\bmp.o: rtc.h
+.\output\bmp.o: bmp.h
+.\output\bmp.o: ./MMU/mmu.h
+.\output\bmp.o: time.h

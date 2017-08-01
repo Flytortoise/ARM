@@ -1,0 +1,15 @@
+.\output\rtc.o: rtc.c
+.\output\rtc.o: app.h
+.\output\rtc.o: led.h
+.\output\rtc.o: delay.h
+.\output\rtc.o: lcd.h
+.\output\rtc.o: uart.h
+.\output\rtc.o: printf.h
+.\output\rtc.o: types.h
+.\output\rtc.o: nand.h
+.\output\rtc.o: key.h
+.\output\rtc.o: rtc.h
+.\output\rtc.o: bmp.h
+.\output\rtc.o: ./MMU/mmu.h
+.\output\rtc.o: time.h
+.\output\rtc.o: F:\Keil\Keil4\ARM\ARMCC\bin\..\include\stdio.h

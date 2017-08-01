@@ -1,0 +1,5 @@
+--cpu ARM926EJ-S ".\output\start.o" ".\output\main.o" ".\output\clock_init.o" ".\output\uart.o" ".\output\my_printf.o" ".\output\isr.o" ".\output\mmu.o" ".\output\2440slib.o" ".\output\time.o" ".\output\chinese.o" ".\output\ascii.o" ".\output\lcd.o" ".\output\led.o" ".\output\bmp.o" ".\output\bmp1.o" ".\output\bmp2.o" ".\output\bmp3.o" ".\output\bmp4.o" ".\output\bmp5.o" ".\output\key.o" ".\output\rtc.o" 
+--strict --scatter ".\Mini2451_Demo.sct" 
+--diag_suppress=L6314W --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\listing\template.map" -o .\output\template.axf

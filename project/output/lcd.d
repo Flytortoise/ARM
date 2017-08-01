@@ -1,0 +1,15 @@
+.\output\lcd.o: lcd.c
+.\output\lcd.o: app.h
+.\output\lcd.o: led.h
+.\output\lcd.o: delay.h
+.\output\lcd.o: lcd.h
+.\output\lcd.o: uart.h
+.\output\lcd.o: printf.h
+.\output\lcd.o: types.h
+.\output\lcd.o: nand.h
+.\output\lcd.o: key.h
+.\output\lcd.o: rtc.h
+.\output\lcd.o: bmp.h
+.\output\lcd.o: ./MMU/mmu.h
+.\output\lcd.o: time.h
+.\output\lcd.o: F:\Keil\Keil4\ARM\ARMCC\bin\..\include\string.h

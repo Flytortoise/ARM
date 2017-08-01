@@ -1,0 +1,14 @@
+.\output\time.o: time.c
+.\output\time.o: app.h
+.\output\time.o: led.h
+.\output\time.o: delay.h
+.\output\time.o: lcd.h
+.\output\time.o: uart.h
+.\output\time.o: printf.h
+.\output\time.o: types.h
+.\output\time.o: nand.h
+.\output\time.o: key.h
+.\output\time.o: rtc.h
+.\output\time.o: bmp.h
+.\output\time.o: ./MMU/mmu.h
+.\output\time.o: time.h

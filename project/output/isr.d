@@ -1,0 +1,14 @@
+.\output\isr.o: isr.c
+.\output\isr.o: app.h
+.\output\isr.o: led.h
+.\output\isr.o: delay.h
+.\output\isr.o: lcd.h
+.\output\isr.o: uart.h
+.\output\isr.o: printf.h
+.\output\isr.o: types.h
+.\output\isr.o: nand.h
+.\output\isr.o: key.h
+.\output\isr.o: rtc.h
+.\output\isr.o: bmp.h
+.\output\isr.o: ./MMU/mmu.h
+.\output\isr.o: time.h

@@ -1,0 +1,14 @@
+.\output\my_printf.o: my_printf.c
+.\output\my_printf.o: app.h
+.\output\my_printf.o: led.h
+.\output\my_printf.o: delay.h
+.\output\my_printf.o: lcd.h
+.\output\my_printf.o: uart.h
+.\output\my_printf.o: printf.h
+.\output\my_printf.o: types.h
+.\output\my_printf.o: nand.h
+.\output\my_printf.o: key.h
+.\output\my_printf.o: rtc.h
+.\output\my_printf.o: bmp.h
+.\output\my_printf.o: ./MMU/mmu.h
+.\output\my_printf.o: time.h
