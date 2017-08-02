@@ -55,6 +55,8 @@ void lcd_clear(unsigned int color)
 	}
 }
 
+
+
 void lcd_dis_bmp(const unsigned char *bmp)
 {
 	unsigned int i,j;

@@ -24,10 +24,25 @@
 #define BCDDATE (*(volatile unsigned *)0X5700007C )
 
 unsigned int Str2BCD(const char * str);
-void rtc_init(void);
-int rtc_work(void);
-void RTC_S(void);
 
+int rtc_work(void);
+
+int rtc_set_time(const char *str);
+
+typedef struct TIME
+{
+	unsigned int year;
+	unsigned int month;
+	unsigned int day;
+	unsigned int hour;
+	unsigned int min;
+	unsigned int sec;
+	
+}TIME;
+
+
+void rtc_get_time(TIME *time);
+void RTC_S(TIME *time);
 
 #endif
 

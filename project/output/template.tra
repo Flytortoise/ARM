@@ -15,15 +15,16 @@
 ### List of Objects: adding '".\output\lcd.o"'
 ### List of Objects: adding '".\output\led.o"'
 ### List of Objects: adding '".\output\bmp.o"'
+### List of Objects: adding '".\output\key.o"'
+### List of Objects: adding '".\output\rtc.o"'
+### List of Objects: adding '".\output\delay.o"'
 ### List of Objects: adding '".\output\bmp1.o"'
 ### List of Objects: adding '".\output\bmp2.o"'
 ### List of Objects: adding '".\output\bmp3.o"'
 ### List of Objects: adding '".\output\bmp4.o"'
 ### List of Objects: adding '".\output\bmp5.o"'
-### List of Objects: adding '".\output\key.o"'
-### List of Objects: adding '".\output\rtc.o"'
 ### ADS-LD Command completed:
---cpu ARM926EJ-S ".\output\start.o" ".\output\main.o" ".\output\clock_init.o" ".\output\uart.o" ".\output\my_printf.o" ".\output\isr.o" ".\output\mmu.o" ".\output\2440slib.o" ".\output\time.o" ".\output\chinese.o" ".\output\ascii.o" ".\output\lcd.o" ".\output\led.o" ".\output\bmp.o" ".\output\bmp1.o" ".\output\bmp2.o" ".\output\bmp3.o" ".\output\bmp4.o" ".\output\bmp5.o" ".\output\key.o" ".\output\rtc.o" 
+--cpu ARM926EJ-S ".\output\start.o" ".\output\main.o" ".\output\clock_init.o" ".\output\uart.o" ".\output\my_printf.o" ".\output\isr.o" ".\output\mmu.o" ".\output\2440slib.o" ".\output\time.o" ".\output\chinese.o" ".\output\ascii.o" ".\output\lcd.o" ".\output\led.o" ".\output\bmp.o" ".\output\key.o" ".\output\rtc.o" ".\output\delay.o" ".\output\bmp1.o" ".\output\bmp2.o" ".\output\bmp3.o" ".\output\bmp4.o" ".\output\bmp5.o" 
 --strict --scatter ".\Mini2451_Demo.sct" 
 --diag_suppress=L6314W --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
@@ -31,7 +32,7 @@
 ### ADS-LD Output File: '.\output\template.axf'
 ### ADS-LD Command File: '.\output\template.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\output\template.lnp', Handle=0x000012D8
+### Creating CmdFile '.\output\template.lnp', Handle=0x000046A0
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\output\template.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

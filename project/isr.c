@@ -7,8 +7,8 @@ unsigned char WORK = 0;
 
 void do_irq(void)
 {
-	LED_S();	
-	RTC_S();
+	
+	//RTC_S();
 	ir_flag++;
 		
 	SRCPND = SRCPND;

@@ -1,5 +1,5 @@
 #include "app.h"
-unsigned char LED_flag = ON;
+
 
 void LED_init()
 {
@@ -9,11 +9,17 @@ void LED_init()
 
 void LED_S()
 {
-	Led_Control(LED1,LED_flag);
-	Led_Control(LED2,LED_flag);
-	Led_Control(LED3,LED_flag);
-	Led_Control(LED4,LED_flag);
-	LED_flag = ~LED_flag;
+	Led_Control(LED1,ON);
+	Led_Control(LED2,ON);
+	Led_Control(LED3,ON);
+	Led_Control(LED4,ON);
+	delay_c(0x500000);
+	Led_Control(LED1,OFF);
+	Led_Control(LED2,OFF);
+	Led_Control(LED3,OFF);
+	Led_Control(LED4,OFF);
+	delay_c(0x500000);
+	
 }
 
 void LED_Display(unsigned int count)
