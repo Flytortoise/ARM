@@ -33,6 +33,16 @@ int bmp_display1(unsigned char *bmp1, unsigned char *bmp2)
 						return 0;
 						
 					}
+					
+					while((GPFDAT & 0x01) == 0)	
+					{
+						while((GPFDAT & 0x01) == 0);
+						lcd_dis_bmp(bmp2);						
+						return -1;
+						
+					}
+					
+					
 				}		
 			}
 			lcd_dis_bmp(temp);
@@ -111,11 +121,31 @@ int bmp_work(void)
 {	
 	unsigned char i = 0;
 	unsigned char flag = 1;
+	int change_flag = 1;
 	lcd_dis_bmp(bmp[i]);
 	while(flag)	//相册大循环
 	{
 		//bmp_display3(bmp[4],bmp[3]);
-		while((GPFDAT & 0x04) == 0)	
+		
+		while((change_flag != -1) && (change_flag != 0))		//默认循环播放
+		{
+			if(i == 4)
+			{
+				change_flag = bmp_display1(bmp[4],bmp[0]);
+				i = 0;
+			}
+			else
+			{
+				change_flag = bmp_display1(bmp[i],bmp[i+1]);
+				i++;
+			}
+			
+			flag = change_flag;
+			
+		}
+		
+		
+		while((GPFDAT & 0x04) == 0)		//上一张
 		{
 			while((GPFDAT & 0x04) == 0);				
 			if(i == 4)
@@ -132,7 +162,7 @@ int bmp_work(void)
 			
 		}
 		
-		while((GPFDAT & 0x02) == 0)	
+		while((GPFDAT & 0x02) == 0)		//下一张
 		{
 			while((GPFDAT & 0x02) == 0);				
 			if(i == 0)
@@ -148,7 +178,16 @@ int bmp_work(void)
 			
 		}
 		
-		while((GPFDAT & 0x08) == 0)	
+		while((GPFDAT & 0x01) == 0)		//切换到循环播放
+		{
+			while((GPFDAT & 0x01) == 0);	
+			change_flag = 1;
+			
+		}
+		
+		
+		
+		while((GPFDAT & 0x08) == 0)		//退出
 		{
 			while((GPFDAT & 0x08) == 0);	
 			return 0;

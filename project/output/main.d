@@ -12,3 +12,4 @@
 .\output\main.o: bmp.h
 .\output\main.o: ./MMU/mmu.h
 .\output\main.o: time.h
+.\output\main.o: F:\Keil\Keil4\ARM\ARMCC\bin\..\include\stdio.h
