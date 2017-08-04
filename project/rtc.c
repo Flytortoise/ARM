@@ -15,7 +15,7 @@ unsigned int SetTime[6];
 
 TIME time_;
 
-unsigned int INT2BCD(unsigned int *dat)
+unsigned int INT2BCD(int *dat)
 {
 	unsigned int result= 0;
 	unsigned int temp = *dat;
@@ -50,12 +50,12 @@ void rtc_BCD2INT(TIME *time)
 
 void rtc_INT2BCD(TIME *time)
 {
-	INT2BCD(&time->year);
-	INT2BCD(&time->month);
-	INT2BCD(&time->day);
-	INT2BCD(&time->hour);
-	INT2BCD(&time->min);
-	INT2BCD(&time->sec);
+	INT2BCD((int *)&time->year);
+	INT2BCD((int *)&time->month);
+	INT2BCD((int *)&time->day);
+	INT2BCD((int *)&time->hour);
+	INT2BCD((int *)&time->min);
+	INT2BCD((int *)&time->sec);
 	
 }
 
@@ -127,6 +127,18 @@ int rtc_set_time(const char *str)
 	
 }
 
+void rtc_set_t(TIME *time)
+{
+	RTCCON |= 0X01;
+	BCDYEAR = time->year;
+	BCDMONTH = time->month;
+	BCDDAY = time->day;
+	BCDHOUR = time->hour;
+	BCDMIN = time->min;
+	BCDSEC = time->sec;
+	RTCCON &= ~(0x01);
+}
+
 void rtc_get_time(TIME *time)
 {
 	RTCCON |= 0X01;
@@ -143,9 +155,10 @@ void RTC_S(TIME *time)
 {
 	LED_S();
 	rtc_get_time(time);
-	sprintf(time_buf,"20%x-%x-%x  %x : %x : %x         ",time->year,time->month,time->day,
+	rtc_BCD2INT(time);
+	sprintf(time_buf,"20%d-%d-%d  %d : %d : %d         ",time->year,time->month,time->day,
 											time->hour,time->min,time->sec);
-	lcd_dis_All(100,85,BLUE,WHITE,time_buf);
+	lcd_dis_All(100,80,BLUE,WHITE,time_buf);
 }
 
 int rtc_work()
@@ -153,15 +166,18 @@ int rtc_work()
 	int flag = 0;
 	int ON_flag = 0;
 	lcd_clear(WHITE);
-	rtc_get_time(&time_);
+	uart_bmp_flag = 0;
+	uart_rtc_flag = 1;
 	
-	rtc_BCD2INT(&time_);
 	
 	
 	while(1)
 	{
+		uart_work();
 		if(ON_flag)
 		{
+			rtc_get_time(&time_);
+			rtc_BCD2INT(&time_);
 			lcd_dis_All(50, 100, BLUE, WHITE,"    时间设置               ");
 			while((GPFDAT & 0x02) == 0)
 			{
@@ -219,6 +235,7 @@ int rtc_work()
 			while((GPFDAT & 0x08) == 0)	
 			{
 				while((GPFDAT & 0x08) == 0);	//退出
+				lcd_clear(WHITE);
 				ON_flag = 0;		
 			}
 			
@@ -238,6 +255,8 @@ int rtc_work()
 			while((GPFDAT & 0x08) == 0)	
 			{
 				while((GPFDAT & 0x08) == 0);	//退出
+				lcd_clear(WHITE);
+				uart_rtc_flag = 0;
 				return 0;	
 			}
 		}
@@ -281,23 +300,24 @@ int rtc_show(int flag)
 			break;
 	}
 	
-	lcd_dis_All(100,85,BLUE,WHITE,time_buf);	
+	lcd_dis_All(100,80,BLUE,WHITE,time_buf);	
 	return 0;
 }
 
 int rtc_time_change(int flag,unsigned int *date)
 {
-	char change_flag = 0;
+	char change_flag2 = 0;
 	lcd_dis_All(50, 100, RED, WHITE, "    请设置具体数值");
 	while(1)
 	{
+		uart_work();
 		while((GPFDAT & 0x02) == 0)
 		{
 			while((GPFDAT & 0x02) == 0);	//按下+	
-			if(change_flag)
+			if(change_flag2)
 			{
 				lcd_dis_str(150, 130, WHITE, WHITE,"          ");
-				change_flag = 0;
+				change_flag2 = 0;
 			}
 			
 			(*date)++;
@@ -329,10 +349,10 @@ int rtc_time_change(int flag,unsigned int *date)
 		while((GPFDAT & 0x04) == 0)
 		{
 			while((GPFDAT & 0x04) == 0);	//按下右		
-			if(change_flag)
+			if(change_flag2)
 			{
 				lcd_dis_str(150, 130, WHITE, WHITE,"          ");
-				change_flag = 0;
+				change_flag2 = 0;
 			}
 			(*date)--;
 			switch(flag)
@@ -366,24 +386,23 @@ int rtc_time_change(int flag,unsigned int *date)
 											time_.hour,time_.min,time_.sec);
 			rtc_set_time(time_buf);
 			lcd_dis_chinese_str(150, 130, RED, WHITE,"设置成功");
-			change_flag++;
+			change_flag2++;
 		}
 		
 		
 		while((GPFDAT & 0x08) == 0)	
 		{
 			while((GPFDAT & 0x08) == 0);	//退出
-			if(change_flag)
+			if(change_flag2)
 			{
 				lcd_dis_str(150, 130, WHITE, WHITE,"          ");
-				change_flag = 0;
+				change_flag2 = 0;
 			}
 			return 0;		
 		}
 		
 		rtc_show(flag);
 		
-	
 	}
 	
 	return 0;

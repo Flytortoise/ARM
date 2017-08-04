@@ -462,6 +462,21 @@
               <FilePath>.\bmp.c</FilePath>
             </File>
             <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\delay.c</FilePath>
+            </File>
+            <File>
               <FileName>bmp1.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\bmp1.c</FilePath>
@@ -485,16 +500,6 @@
               <FileName>bmp5.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\bmp5.c</FilePath>
-            </File>
-            <File>
-              <FileName>key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\key.c</FilePath>
-            </File>
-            <File>
-              <FileName>rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\rtc.c</FilePath>
             </File>
           </Files>
         </Group>

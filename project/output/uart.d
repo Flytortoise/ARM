@@ -12,3 +12,5 @@
 .\output\uart.o: bmp.h
 .\output\uart.o: ./MMU/mmu.h
 .\output\uart.o: time.h
+.\output\uart.o: F:\Keil\Keil4\ARM\ARMCC\bin\..\include\stdio.h
+.\output\uart.o: F:\Keil\Keil4\ARM\ARMCC\bin\..\include\string.h

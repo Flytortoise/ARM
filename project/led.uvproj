@@ -402,11 +402,6 @@
               <FilePath>.\Main.c</FilePath>
             </File>
             <File>
-              <FileName>clock_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\clock_init.c</FilePath>
-            </File>
-            <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\uart.c</FilePath>
@@ -415,11 +410,6 @@
               <FileName>my_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\my_printf.c</FilePath>
-            </File>
-            <File>
-              <FileName>isr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\isr.c</FilePath>
             </File>
             <File>
               <FileName>mmu.c</FileName>
@@ -460,11 +450,6 @@
               <FileName>bmp.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\bmp.c</FilePath>
-            </File>
-            <File>
-              <FileName>key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\key.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>

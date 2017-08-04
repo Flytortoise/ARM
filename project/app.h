@@ -47,7 +47,8 @@ typedef struct
 
 extern const ASC ascii[];
 
-
+extern int uart_bmp_flag;
+extern int uart_rtc_flag;
 
 #endif
 

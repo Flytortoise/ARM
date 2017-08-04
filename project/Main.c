@@ -2,7 +2,7 @@
 #include <stdio.h>
 TIME t = {0,0,0,0,0,0};
 TIME time_temp;
-char send_buff[100];
+int main_flag = 0;
 int Show(int flag);
 
 unsigned char cmd[50];
@@ -13,17 +13,12 @@ void Init()
 	lcd_init();
 	MMU_Init();
 	uart_init();
-	//time0_init();
-	//key_init();
 }
 
 
 
 void Main()
 {	
-	int flag = 0;
-	
-//	int menu_flag = 0;
 	
 	Init();
 	lcd_clear(WHITE);
@@ -31,13 +26,22 @@ void Main()
 	while(1)
 	{
 		rtc_get_time(&t);
+		uart_work();
+		
+		if((t.sec - time_temp.sec) > 5)	//停顿5s进入时间显示
+		{
+			rtc_work();
+			lcd_clear(WHITE);
+			rtc_get_time(&time_temp);
+		}
+		
 // 		sprintf(send_buff,"a %d a ",(t.sec - time_temp.sec));
 // 		uart_send_str((unsigned char *)send_buff);		
 		while((GPFDAT & 0x02) == 0)
 		{
 			while((GPFDAT & 0x02) == 0);	//按下左		
 			rtc_get_time(&time_temp);
-			flag = 1;
+			main_flag = 1;
 			
 		}
 		
@@ -45,7 +49,7 @@ void Main()
 		{
 			while((GPFDAT & 0x04) == 0);	//按下右		
 			rtc_get_time(&time_temp);
-			flag = 2;
+			main_flag = 2;
 			
 		}
 		
@@ -53,7 +57,7 @@ void Main()
 		{
 			while((GPFDAT & 0x01) == 0);	//按下进入	
 			rtc_get_time(&time_temp);
-			switch (flag)
+			switch (main_flag)
 			{
 				case 1 :
 					bmp_work();	
@@ -66,22 +70,14 @@ void Main()
 				default :
 					break;
 			}
-			lcd_clear(WHITE);
-			rtc_get_time(&t);
+			lcd_clear(WHITE);	
+			//rtc_get_time(&t);
 			rtc_get_time(&time_temp);
 							
 		}
-		
-		if((t.sec - time_temp.sec) > 5)	//停顿5s进入时间显示
-		{
-			rtc_work();
-			lcd_clear(WHITE);
-			rtc_get_time(&time_temp);
-		}
-		
-		Show(flag);
+			
+		Show(main_flag);
 		LED_S();
-		
 						
  	}
 	

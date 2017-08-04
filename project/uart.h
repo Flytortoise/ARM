@@ -4,9 +4,10 @@
 void uart_init(void);
 
 void uart_send_byte(unsigned char ch);
-unsigned char uart_recv_byte(void);
+char uart_recv_byte(void);
 void uart_send_str(unsigned char *str);
 void uart_recv_str(unsigned char *buff);
+int uart_work(void);
 
 #endif
 

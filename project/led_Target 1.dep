@@ -1,60 +1,47 @@
 Dependencies for Project 'led', Target 'Target 1': (DO NOT MODIFY !)
-F (.\start.s)(0x597456C7)(--cpu ARM926EJ-S -g -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include --list ".\listing\start.lst" --xref -o ".\output\start.o" --depend ".\output\start.d")
-F (.\Main.c)(0x59833076)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\main.o" --omf_browse ".\output\main.crf" --depend ".\output\main.d")
-I (app.h)(0x59812E7C)
+F (.\start.s)(0x5983D5C0)(--cpu ARM926EJ-S -g -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include --list ".\listing\start.lst" --xref -o ".\output\start.o" --depend ".\output\start.d")
+F (.\Main.c)(0x59840476)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\main.o" --omf_browse ".\output\main.crf" --depend ".\output\main.d")
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)
 I (F:\Keil\Keil4\ARM\ARMCC\bin\..\include\stdio.h)(0x50F96150)
-F (.\clock_init.c)(0x5969B34D)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\clock_init.o" --omf_browse ".\output\clock_init.crf" --depend ".\output\clock_init.d")
-F (.\uart.c)(0x5972C8EA)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\uart.o" --omf_browse ".\output\uart.crf" --depend ".\output\uart.d")
-I (app.h)(0x59812E7C)
+F (.\uart.c)(0x59840529)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\uart.o" --omf_browse ".\output\uart.crf" --depend ".\output\uart.d")
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)
+I (F:\Keil\Keil4\ARM\ARMCC\bin\..\include\stdio.h)(0x50F96150)
+I (F:\Keil\Keil4\ARM\ARMCC\bin\..\include\string.h)(0x50F96150)
 F (.\my_printf.c)(0x59730002)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\my_printf.o" --omf_browse ".\output\my_printf.crf" --depend ".\output\my_printf.d")
-I (app.h)(0x59812E7C)
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
-I (bmp.h)(0x59806306)
-I (./MMU/mmu.h)(0x57811450)
-I (time.h)(0x59746316)
-F (.\isr.c)(0x59813BFF)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\isr.o" --omf_browse ".\output\isr.crf" --depend ".\output\isr.d")
-I (app.h)(0x59812E7C)
-I (led.h)(0x597FEE0D)
-I (delay.h)(0x5961CE14)
-I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
-I (printf.h)(0x5972E2AD)
-I (types.h)(0x5972E9D9)
-I (nand.h)(0x59733F36)
-I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)
@@ -64,104 +51,90 @@ I (MMU\2440slib.h)(0x57092706)
 I (MMU\typedef.h)(0x5709339A)
 F (.\MMU\2440slib.s)(0x57555588)(--cpu ARM926EJ-S -g -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include --list ".\listing\2440slib.lst" --xref -o ".\output\2440slib.o" --depend ".\output\2440slib.d")
 F (.\time.c)(0x598132D4)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\time.o" --omf_browse ".\output\time.crf" --depend ".\output\time.d")
-I (app.h)(0x59812E7C)
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)
 F (.\chinese.c)(0x596B39EB)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\chinese.o" --omf_browse ".\output\chinese.crf" --depend ".\output\chinese.d")
 F (.\ascii.c)(0x59734EDE)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\ascii.o" --omf_browse ".\output\ascii.crf" --depend ".\output\ascii.d")
 F (.\lcd.c)(0x59819627)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\lcd.o" --omf_browse ".\output\lcd.crf" --depend ".\output\lcd.d")
-I (app.h)(0x59812E7C)
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)
 I (F:\Keil\Keil4\ARM\ARMCC\bin\..\include\string.h)(0x50F96150)
 F (.\led.c)(0x59813E8A)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\led.o" --omf_browse ".\output\led.crf" --depend ".\output\led.d")
-I (app.h)(0x59812E7C)
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)
-F (.\bmp.c)(0x5982BF5C)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\bmp.o" --omf_browse ".\output\bmp.crf" --depend ".\output\bmp.d")
-I (app.h)(0x59812E7C)
+F (.\bmp.c)(0x5983EB15)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\bmp.o" --omf_browse ".\output\bmp.crf" --depend ".\output\bmp.d")
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)
-F (.\key.c)(0x598060FA)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\key.o" --omf_browse ".\output\key.crf" --depend ".\output\key.d")
-I (app.h)(0x59812E7C)
+F (.\rtc.c)(0x5984053C)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\rtc.o" --omf_browse ".\output\rtc.crf" --depend ".\output\rtc.d")
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
-I (bmp.h)(0x59806306)
-I (./MMU/mmu.h)(0x57811450)
-I (time.h)(0x59746316)
-F (.\rtc.c)(0x5982DC95)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\rtc.o" --omf_browse ".\output\rtc.crf" --depend ".\output\rtc.d")
-I (app.h)(0x59812E7C)
-I (led.h)(0x597FEE0D)
-I (delay.h)(0x5961CE14)
-I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
-I (printf.h)(0x5972E2AD)
-I (types.h)(0x5972E9D9)
-I (nand.h)(0x59733F36)
-I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)
 I (F:\Keil\Keil4\ARM\ARMCC\bin\..\include\stdio.h)(0x50F96150)
 F (.\delay.c)(0x5961CE14)(-c --cpu ARM926EJ-S -g -O0 --apcs=interwork -I F:\Keil\Keil4\ARM\RV31\INC -I F:\Keil\Keil4\ARM\CMSIS\Include -o ".\output\delay.o" --omf_browse ".\output\delay.crf" --depend ".\output\delay.d")
-I (app.h)(0x59812E7C)
+I (app.h)(0x5983E63E)
 I (led.h)(0x597FEE0D)
 I (delay.h)(0x5961CE14)
 I (lcd.h)(0x59819627)
-I (uart.h)(0x596B3266)
+I (uart.h)(0x5983D98E)
 I (printf.h)(0x5972E2AD)
 I (types.h)(0x5972E9D9)
 I (nand.h)(0x59733F36)
 I (key.h)(0x598033FC)
-I (rtc.h)(0x59813D8D)
+I (rtc.h)(0x5983FC88)
 I (bmp.h)(0x59806306)
 I (./MMU/mmu.h)(0x57811450)
 I (time.h)(0x59746316)

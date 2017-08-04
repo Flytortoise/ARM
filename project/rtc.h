@@ -10,9 +10,7 @@
 #define ALMMIN (*(volatile unsigned *)0x57000058 )	
 
 #define SRCPND1 (*(volatile unsigned *)0x4A000000 )	
-#define INTMOD1 (*(volatile unsigned *)0x4A000000 )
-#define INTMSK1 (*(volatile unsigned *)0x4A000000 )
-#define INTPNP1 (*(volatile unsigned *)0x4A000000 )
+
 
 #define BCDHOUR (*(volatile unsigned *)0X57000078 )	
 #define BCDMIN (*(volatile unsigned *)0X57000074 )
@@ -24,7 +22,7 @@
 #define BCDDATE (*(volatile unsigned *)0X5700007C )
 
 unsigned int Str2BCD(const char * str);
-
+unsigned int INT2BCD(int *dat);
 int rtc_work(void);
 
 int rtc_set_time(const char *str);
@@ -43,6 +41,7 @@ typedef struct TIME
 
 void rtc_get_time(TIME *time);
 void RTC_S(TIME *time);
+void rtc_set_t(TIME *time);
 
 #endif
 
