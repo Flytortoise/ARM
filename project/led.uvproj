@@ -486,6 +486,11 @@
               <FileType>1</FileType>
               <FilePath>.\bmp5.c</FilePath>
             </File>
+            <File>
+              <FileName>isr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\isr.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

@@ -20,8 +20,9 @@
 ### List of Objects: adding '".\output\bmp3.o"'
 ### List of Objects: adding '".\output\bmp4.o"'
 ### List of Objects: adding '".\output\bmp5.o"'
+### List of Objects: adding '".\output\isr.o"'
 ### ADS-LD Command completed:
---cpu ARM926EJ-S ".\output\start.o" ".\output\main.o" ".\output\uart.o" ".\output\my_printf.o" ".\output\mmu.o" ".\output\2440slib.o" ".\output\time.o" ".\output\chinese.o" ".\output\ascii.o" ".\output\lcd.o" ".\output\led.o" ".\output\bmp.o" ".\output\rtc.o" ".\output\delay.o" ".\output\bmp1.o" ".\output\bmp2.o" ".\output\bmp3.o" ".\output\bmp4.o" ".\output\bmp5.o" 
+--cpu ARM926EJ-S ".\output\start.o" ".\output\main.o" ".\output\uart.o" ".\output\my_printf.o" ".\output\mmu.o" ".\output\2440slib.o" ".\output\time.o" ".\output\chinese.o" ".\output\ascii.o" ".\output\lcd.o" ".\output\led.o" ".\output\bmp.o" ".\output\rtc.o" ".\output\delay.o" ".\output\bmp1.o" ".\output\bmp2.o" ".\output\bmp3.o" ".\output\bmp4.o" ".\output\bmp5.o" ".\output\isr.o" 
 --strict --scatter ".\Mini2451_Demo.sct" 
 --diag_suppress=L6314W --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
@@ -29,10 +30,10 @@
 ### ADS-LD Output File: '.\output\template.axf'
 ### ADS-LD Command File: '.\output\template.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\output\template.lnp', Handle=0x00003138
+### Creating CmdFile '.\output\template.lnp', Handle=0x00000894
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\output\template.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
-### ADS-LD: executed with 1 errors
+### ADS-LD: executed with 0 errors
 ### Updating obj list
 ### LDADS_file() completed.

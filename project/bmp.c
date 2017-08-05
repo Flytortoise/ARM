@@ -1,7 +1,7 @@
 #include "app.h"
 
 extern int uart_plus_flag;
-
+int bmp_speed = 1;
 unsigned char temp[307200];
 unsigned char temp1[320][240][4];
 unsigned char bmp_temp_flag[307200] = {0};
@@ -70,7 +70,7 @@ int bmp_display2(unsigned char *bmp1, unsigned char *bmp2)	//向下
 	{
 		//uart_work();
 		temp[i] = bmp2[i];
-		if(i % 10000 == 0)
+		if(i %(bmp_speed*10000) == 0)
 		{
 			lcd_dis_bmp(temp);
 		}
@@ -103,7 +103,7 @@ int bmp_display3(unsigned char *bmp1, unsigned char *bmp2)	//向上
 	{
 		//uart_work();
 		temp[i] = bmp2[i];
-		if(i % 10000 == 0)
+		if(i %(bmp_speed*10000) == 0)
 		{
 			lcd_dis_bmp(temp);
 		}

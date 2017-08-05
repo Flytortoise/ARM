@@ -5,6 +5,7 @@ extern int main_flag;
 extern TIME time_temp;
 extern TIME t;
 extern int change_flag ;
+extern int bmp_speed;
 
 #define ULCON0   		( *((volatile unsigned long *)0x50000000) )
 #define UCON0    		( *((volatile unsigned long *)0x50000004) )
@@ -101,6 +102,8 @@ void uart_recv_str(unsigned char *buff)
 
 int uart_work(void)
 {
+	int i;
+	int dat = 0;
 	uart_recv_str(uart_buff);
 	
 	if(strlen((char *)uart_buff) == 0)
@@ -144,6 +147,24 @@ int uart_work(void)
 		{
 			uart_plus_flag = 2;
 		}
+		
+		if(strncmp((char *)uart_buff,"set speed = ",12) == 0 )
+		{
+			i = 12;
+			while(uart_buff[i] != '\0')
+			{
+				dat = dat*10 + uart_buff[i] - '0';
+				i++;
+			}
+			
+			if(dat >= 1 && dat <= 5)
+			{
+				bmp_speed = dat;
+			}		
+			
+		}
+		
+		
 		
 	}
 	else if(uart_rtc_flag)

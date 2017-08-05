@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 24]: Last Updated: Fri Aug 04 13:22:03 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 24]: Last Updated: Sat Aug 05 22:25:53 2017
 <BR><P>
 <H3>Maximum Stack Usage =        312 bytes + Unknown(Functions without stacksize, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -280,8 +280,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_work
 </UL>
 
-<P><STRONG><a name="[31]"></a>uart_work</STRONG> (ARM, 264 bytes, Stack size 8 bytes, uart.o(.text), UNUSED)
+<P><STRONG><a name="[31]"></a>uart_work</STRONG> (ARM, 364 bytes, Stack size 16 bytes, uart.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp (via BLX)
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen (via BLX)
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_time
 <LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_recv_str
@@ -293,8 +294,6 @@ Global Symbols
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmp_work
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main
 </UL>
-
-<P><STRONG><a name="[95]"></a>do_irq</STRONG> (ARM, 4 bytes, Stack size 0 bytes, isr.o(.text), UNUSED)
 
 <P><STRONG><a name="[46]"></a>MMU_SetMTT</STRONG> (ARM, 88 bytes, Stack size 20 bytes, mmu.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChangeRomCacheStatus
@@ -395,7 +394,7 @@ Global Symbols
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_dis_str
 </UL>
 
-<P><STRONG><a name="[96]"></a>LED_init</STRONG> (ARM, 24 bytes, Stack size 0 bytes, led.o(.text), UNUSED)
+<P><STRONG><a name="[95]"></a>LED_init</STRONG> (ARM, 24 bytes, Stack size 0 bytes, led.o(.text), UNUSED)
 
 <P><STRONG><a name="[54]"></a>Led_Control</STRONG> (ARM, 332 bytes, Stack size 0 bytes, led.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Display
@@ -422,7 +421,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmp_work
 </UL>
 
-<P><STRONG><a name="[59]"></a>bmp_display2</STRONG> (ARM, 184 bytes, Stack size 16 bytes, bmp.o(.text), UNUSED)
+<P><STRONG><a name="[59]"></a>bmp_display2</STRONG> (ARM, 196 bytes, Stack size 16 bytes, bmp.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_dis_bmp
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
@@ -430,7 +429,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmp_work
 </UL>
 
-<P><STRONG><a name="[5b]"></a>bmp_display3</STRONG> (ARM, 184 bytes, Stack size 16 bytes, bmp.o(.text), UNUSED)
+<P><STRONG><a name="[5b]"></a>bmp_display3</STRONG> (ARM, 196 bytes, Stack size 16 bytes, bmp.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_dis_bmp
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
@@ -552,6 +551,8 @@ Global Symbols
 <LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_S
 </UL>
 
+<P><STRONG><a name="[96]"></a>do_irq</STRONG> (ARM, 4 bytes, Stack size 0 bytes, isr.o(.text), UNUSED)
+
 <P><STRONG><a name="[53]"></a>vsprintf</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, vsprintf.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
@@ -594,6 +595,7 @@ Global Symbols
 
 <P><STRONG><a name="[3b]"></a>strncmp</STRONG> (Thumb, 144 bytes, Stack size 20 bytes, strncmp.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_time (via BLX)
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_work (via BLX)
 </UL>
 
 <P><STRONG><a name="[3f]"></a>strcmp</STRONG> (ARM, 156 bytes, Stack size 4 bytes, strcmp.o(.text))
@@ -610,10 +612,10 @@ Global Symbols
 <P><STRONG><a name="[5a]"></a>__aeabi_idivmod</STRONG> (ARM, 380 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_hex_real (via BLX)
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento (via BLX)
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_hex_real (via BLX)
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmp_display3
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmp_display2
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento (via BLX)
 </UL>
 
 <P><STRONG><a name="[70]"></a>_printf_pre_padding</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, _printf_pad.o(.text))
@@ -1065,8 +1067,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_e2e
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__btod_div_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits (via BLX)
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento (via BLX)
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento (via BLX)
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits (via BLX)
 </UL>
 
 <P><STRONG><a name="[7b]"></a>_btod_emul</STRONG> (ARM, 48 bytes, Stack size 24 bytes, btod.o(CL$$btod_emul))
@@ -1075,8 +1077,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__btod_mult_common
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_e2e
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits (via BLX)
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento (via BLX)
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento (via BLX)
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits (via BLX)
 </UL>
 
 <P><STRONG><a name="[8e]"></a>__btod_mult_common</STRONG> (ARM, 612 bytes, Stack size 16 bytes, btod.o(CL$$btod_mult_common))
@@ -1153,12 +1155,12 @@ Local Symbols
 <P><STRONG><a name="[77]"></a>_fp_digits</STRONG> (Thumb, 410 bytes, Stack size 96 bytes, _printf_fp_dec.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = _fp_digits &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ll_udiv10 (via BLX)
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_d2e (via BLX)
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ll_udiv10 (via BLX)
 <LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee_status (via BLX)
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_emul (via BLX)
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_ediv (via BLX)
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_d2e (via BLX)
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
 </UL>
